@@ -28,11 +28,76 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.drumpad {
+    width: fit-content;
+    display: inline;
+}
+
+.h1 {
+    color: #00cec9;
+    text-shadow: 3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    margin: 1rem 0 0.5rem 0;
+}
+
+button {
+    background-color: #81ecec;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00cec9;
+    text-shadow: 3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+button.active,button:active {
+    background-color: #00cec9;
+    transform: scale(.9);
+    box-shadow: 0 3px 15px -20px;
+}
+
+button:focus {outline: none;}
+button:active {border-style: solid;}
+
+#drum-machine {
+    height: 15rem;
+    width: 15rem;
+    margin: auto;
+}
+
+.section {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+.App {
+background-color: #6c5ce7;
+width: 90vw;
+height: 90vw;
+margin: auto;
+border-radius: 25px;
+box-shadow: #00cec9 2px 2px 2px 3px;
+}
+
+html {
+    background-color: #81ecec;;
+}
+
+output {
+    font-size: 1.5rem;
+    font-weight: 800;
 }
