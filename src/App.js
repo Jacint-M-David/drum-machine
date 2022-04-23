@@ -9,12 +9,12 @@ import {useState, useEffect} from "react";
 //     return <button onKeyUp={playAudio} onClick={playAudio}>{id}</button>
 // };
 
-const Drumpad = ({name, clickHandler}) => {   
+const Drumpad = ({name, clickHandler, audioSrc}) => {   
     return (
         <div className="drumpad">
             <button onClick={clickHandler}>{name}</button>
             {/* This tag makes no sense and only exists to fulfil User Story #4 */}
-            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" id={name} className='clip'></audio>
+            <audio src={audioSrc} id={name} className='clip'></audio>
         </div>
     )
 };
@@ -66,12 +66,12 @@ function App() {
         <h1 className="h1">Drum Machine</h1>
         <main id="drum-machine">
             <section className="section">
-                {drumpads.map((drumpad, index) => <Drumpad name={drumpad} key={index} audioSrc={audioLinks[index]}  clickHandler={playAudio(audioLinks[index])} id={idDescription[index]}/>)}
+                {drumpads.map((drumpad, index) => <Drumpad name={drumpad} className="drum-pad" key={index} audioSrc={audioLinks[index]}  clickHandler={playAudio(audioLinks[index])} id={idDescription[index]}/>)}
             </section>
-        </main>
             <div id="display">
                 <output>{playing}</output>
             </div>
+        </main>
     </div>
   );
 

@@ -85,9 +85,9 @@ button:active {border-style: solid;}
 }
 
 .App {
-background-color: #6c5ce7;
-width: 90vw;
-height: 90vw;
+background-image: linear-gradient(160deg, #e84393, #ffeaa7);
+width: 17.5rem;
+height: 20rem;
 margin: auto;
 border-radius: 25px;
 box-shadow: #00cec9 2px 2px 2px 3px;
@@ -98,6 +98,12 @@ html {
 }
 
 output {
+    margin-top: 0.75rem;
     font-size: 1.5rem;
     font-weight: 800;
+    color: #00cec9;
+    text-shadow: 3px 3px 0 #000,-1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
