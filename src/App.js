@@ -59,6 +59,7 @@ function App() {
         
         useEffect(() => {
             document.addEventListener("keypress", keyUpHandler);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         },[]);
         
         return (
